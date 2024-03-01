@@ -1,5 +1,4 @@
 import type { PageServerLoad } from './$types';
-
 import { XataClient } from '../xata';
 
 function round(num: number) {
@@ -12,7 +11,8 @@ const xata = new XataClient({
 });
 
 export const load: PageServerLoad = async () => {
-	const posts = await xata.db.weather_data.getFirst();
-
-	return {...posts};
+	const data = await xata.db.weather_data
+		.sort("xata.createdAt", "desc")
+		.getFirst();
+	return data;
 };
