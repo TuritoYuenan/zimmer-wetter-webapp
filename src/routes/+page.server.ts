@@ -1,5 +1,5 @@
 import type { PageServerLoad } from './$types';
-import { XataClient } from '../xata';
+import { XataClient } from '../lib/xata';
 
 function round(num: number) {
 	return Math.round(num);
