@@ -13,6 +13,10 @@
 <Header />
 
 <main class="grid">
+	<section style="grid-area: ds;">
+		<h2>Description</h2>
+		<p>Lorem, ipsum dolor.</p>
+	</section>
 	<section style="grid-area: tp">
 		<h2>Temperature</h2>
 		<p>{data.temperature} &deg;C</p>
@@ -46,6 +50,6 @@
 <style>
 	main {
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-areas: "tp ht ps" "wd wd rn";
+		grid-template-areas: "ds rn wd" "tp ht ps";
 	}
 </style>

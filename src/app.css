@@ -16,9 +16,14 @@
 	--swinburne-offwhite: #F7F6F3;
 	--swinburne-beige: #F7F5EE;
 
-	/* Other colours in the guide */
+	/* Other colours included in the guide */
 	--border-colour: #D9D5D1;
 	--link-colour: #0358AD;
+
+	/* Root styles */
+	background: var(--swinburne-red);
+	font-family: "Barlow", system-ui, sans-serif;
+	font-weight: 400;
 }
 
 * {
@@ -26,20 +31,13 @@
 }
 
 body {
-	max-width: 1280px;
+	max-width: 1600px;
 	margin: auto;
 	padding: 1rem;
-	background: var(--swinburne-red);
-	font-family: system-ui, sans-serif;
 }
 
 #app > *:not(:last-child) {
 	margin-bottom: 1rem;
-}
-
-main {
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-areas: 'tp ht ps' 'wd wd rn';
 }
 
 h1,
