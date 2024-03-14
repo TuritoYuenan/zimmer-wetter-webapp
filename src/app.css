@@ -1,3 +1,26 @@
+@charset "UTF-8";
+
+:root {
+	/* Swinburne colour palette */
+	/* https://swinburne.edu.au/app/web-style/styleguide/elements.php */
+	--swinburne-red: #DC2D27;
+	--swinburne-blue: #00AEEF;
+	--swinburne-teal: #00BED8;
+	--swinburne-green: #86C441;
+	--swinburne-black: #000000;
+	--swinburne-darkergrey: #292625;
+	--swinburne-darkgrey: #474442;
+	--swinburne-grey: #6A6664;
+	--swinburne-lightgrey: #D9D5D1;
+	--swinburne-lightergrey: #EDEAE5;
+	--swinburne-offwhite: #F7F6F3;
+	--swinburne-beige: #F7F5EE;
+
+	/* Other colours in the guide */
+	--border-colour: #D9D5D1;
+	--link-colour: #0358AD;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -6,11 +29,11 @@ body {
 	max-width: 1280px;
 	margin: auto;
 	padding: 1rem;
-	background: #ED1C2E;
+	background: var(--swinburne-red);
 	font-family: system-ui, sans-serif;
 }
 
-body > div > *:not(:last-child) {
+#app > *:not(:last-child) {
 	margin-bottom: 1rem;
 }
 
@@ -39,7 +62,7 @@ section,
 footer {
 	padding: 1rem 2rem;
 	border-radius: 1rem;
-	background: white;
+	background: var(--swinburne-offwhite);
 }
 
 img {

@@ -1,6 +1,6 @@
 {
 	"name": "zimmer-wetter-webapp",
-	"version": "0.0.1",
+	"version": "1.0",
 	"private": true,
 	"scripts": {
 		"start": "vite dev --open",
@@ -21,6 +21,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@xata.io/client": "^0.29.2"
+		"@xata.io/client": "^0.29.3"
 	}
 }
