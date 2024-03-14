@@ -11,6 +11,12 @@
 		grid-template-columns: auto 1fr;
 	}
 
+	img {
+		margin: auto;
+		padding-inline: 1rem;
+		display: block;
+	}
+
 	#title {
 		display: grid;
 		align-content: center;

@@ -63,12 +63,6 @@ footer {
 	background: var(--swinburne-offwhite);
 }
 
-img {
-	margin: auto;
-	padding-inline: 1rem;
-	display: block;
-}
-
 .grid {
 	display: grid;
 	gap: 1rem;

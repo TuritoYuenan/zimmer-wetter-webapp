@@ -10,9 +10,9 @@ const xata = new XataClient({
 	branch: import.meta.env.VITE_XATA_BRANCH
 });
 
-export const load: PageServerLoad = async () => {
+export const load = (async () => {
 	const data = await xata.db.weather_data
 		.sort("xata.createdAt", "desc")
 		.getFirst();
 	return data;
-};
+}) satisfies PageServerLoad;
