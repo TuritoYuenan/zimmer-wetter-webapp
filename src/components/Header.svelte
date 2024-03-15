@@ -12,6 +12,7 @@
 		background-color: var(--swinburne-offwhite);
 		gap: 1rem;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 	}
 
@@ -22,6 +23,7 @@
 	}
 
 	#title {
+		padding: 1rem;
 		display: grid;
 		align-content: center;
 		text-align: center;
