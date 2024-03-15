@@ -31,13 +31,7 @@
 }
 
 body {
-	max-width: 1600px;
 	margin: auto;
-	padding: 1rem;
-}
-
-#app > *:not(:last-child) {
-	margin-bottom: 1rem;
 }
 
 h1,
@@ -55,11 +49,9 @@ p {
 	text-align: end;
 }
 
-div,
 section,
 footer {
-	padding: 1rem 2rem;
-	border-radius: 1rem;
+	padding: 1rem 1.5rem;
 	background: var(--swinburne-offwhite);
 }
 

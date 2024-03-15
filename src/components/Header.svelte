@@ -1,14 +1,18 @@
-<header class="grid">
+<header>
 	<div><img src="/swinburne.svg" alt="Swinburne University Logo" /></div>
 	<div id="title">
-		<h1>Minh Triet's Weather Station</h1>
-		<h2>Made with Arduino Uno, ESP8266, SEN0186, and passion🔥</h2>
+		<h1>Swinburne Weather Service</h1>
+		<h2>Weather at Swinburne HCMC, measured by the SEN0186 Station</h2>
 	</div>
 </header>
 
 <style>
 	header {
-		grid-template-columns: auto 1fr;
+		padding-block: 1rem;
+		background-color: var(--swinburne-offwhite);
+		gap: 1rem;
+		display: flex;
+		justify-content: center;
 	}
 
 	img {
@@ -22,6 +26,7 @@
 		align-content: center;
 		text-align: center;
 	}
+
 	#title > * {
 		margin-block: 0.5rem;
 	}

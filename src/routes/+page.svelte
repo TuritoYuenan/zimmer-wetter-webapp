@@ -49,6 +49,7 @@
 
 <style>
 	main {
+		padding: 1rem;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-areas: "ds rn wd" "tp ht ps";
 	}
@@ -57,5 +58,12 @@
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
+	}
+
+	@media (width <= 1100px) {
+		main {
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: "ds tp" "ps ht" "wd rn";
+		}
 	}
 </style>

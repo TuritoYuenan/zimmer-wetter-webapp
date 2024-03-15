@@ -3,14 +3,25 @@
 	"tasks": [
 		{
 			"type": "npm",
-			"script": "dev",
+			"script": "start",
 			"problemMatcher": [],
-			"label": "npm: dev",
-			"detail": "vite dev",
+			"label": "npm: start",
+			"detail": "vite dev --open",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "npm",
+			"script": "build",
 			"group": {
 				"kind": "build",
 				"isDefault": true
-			}
+			},
+			"problemMatcher": [],
+			"label": "npm: build",
+			"detail": "vite build"
 		}
 	]
 }
