@@ -13,34 +13,34 @@
 <Header />
 
 <main class="grid">
-	<section style="grid-area: ds;">
+	<section style:grid-area=ds>
 		<h2>Description</h2>
 		<p>Lorem, ipsum dolor.</p>
 	</section>
-	<section style="grid-area: tp">
-		<h2><img src="/icons/tempture.svg" width=28 height=28 alt="">Temperature</h2>
+	<section style:grid-area=tp>
+		<h2><img src="/icons/tempture.svg" width=40 height=40 alt="">Temperature</h2>
 		<p>{data.temperature} &deg;C</p>
 	</section>
-	<section style="grid-area: ht">
-		<h2><img src="/icons/humidity.svg" width=28 height=28 alt="">Humidity</h2>
+	<section style:grid-area=ht>
+		<h2><img src="/icons/humidity.svg" width=40 height=40 alt="">Humidity</h2>
 		<p>{data.humidity} %</p>
 	</section>
-	<section style="grid-area: ps">
-		<h2><img src="/icons/pressure.svg" width=28 height=28 alt="">Barometric Pressure</h2>
+	<section style:grid-area=ps>
+		<h2><img src="/icons/pressure.svg" width=40 height=40 alt="">Barometric Pressure</h2>
 		<p>{data.pressure} hPa</p>
 	</section>
-	<section style="grid-area: rn">
-		<h2><img src="/icons/rainfall.svg" width=28 height=28 alt="">Rainfall (1 Hour)</h2>
+	<section style:grid-area=rn>
+		<h2><img src="/icons/rainfall.svg" width=40 height=40 alt="">Rainfall (1 Hour)</h2>
 		<p>{data.rainfall_H} mm</p>
-		<h2><img src="/icons/rainfall.svg" width=28 height=28 alt="">Rainfall (1 Day)</h2>
+		<h2><img src="/icons/rainfall.svg" width=40 height=40 alt="">Rainfall (1 Day)</h2>
 		<p>{data.rainfall_D} mm</p>
 	</section>
-	<section style="grid-area: wd">
-		<h2><img src="/icons/wind-spd.svg" width=28 height=28 alt="">Average Wind Speed</h2>
+	<section style:grid-area=wd>
+		<h2><img src="/icons/wind-spd.svg" width=40 height=40 alt="">Average Wind Speed</h2>
 		<p>{data.windSpeedAvg} m/s</p>
-		<h2><img src="/icons/wind-spd.svg" width=28 height=28 alt="">Maximum Wind Speed</h2>
+		<h2><img src="/icons/wind-spd.svg" width=40 height=40 alt="">Maximum Wind Speed</h2>
 		<p>{data.windSpeedMax} m/s</p>
-		<h2><img src="/icons/wind-dir.svg" width=28 height=28 alt="">Wind Direction</h2>
+		<h2><img src="/icons/wind-dir.svg" width=40 height=40 alt="">Wind Direction</h2>
 		<p>{data.windDirection} degrees</p>
 	</section>
 </main>
