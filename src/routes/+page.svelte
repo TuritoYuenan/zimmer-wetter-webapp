@@ -60,6 +60,11 @@
 		gap: 0.5rem;
 	}
 
+	p {
+		font-size: 3rem;
+		text-align: end;
+	}
+
 	@media (width <= 1100px) {
 		main {
 			grid-template-columns: 1fr 1fr;
