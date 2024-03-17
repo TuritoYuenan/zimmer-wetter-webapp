@@ -3,6 +3,7 @@
 	import Footer from "../components/Footer.svelte";
 
 	import "../app.css";
+	import describe from "$lib/describe";
 	export let data;
 </script>
 
@@ -15,7 +16,7 @@
 <main class="grid">
 	<section style:grid-area=ds>
 		<h2>Description</h2>
-		<p>Lorem, ipsum dolor.</p>
+		<p>{describe(data.temperature, data.humidity)}</p>
 	</section>
 	<section style:grid-area=tp>
 		<h2><img src="/icons/tempture.svg" width=40 height=40 alt="">Temperature</h2>
