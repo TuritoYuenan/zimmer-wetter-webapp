@@ -17,7 +17,7 @@ export default function (temperature: number, humidity: number): string {
 		description += "Chilly";
 	} else if (temperature < 15) {
 		description += "Cool";
-	} else if (temperature < 26) {
+	} else if (temperature < 30) {
 		description += "Warm";
 	} else if (temperature < 35) {
 		description += "Hot";
