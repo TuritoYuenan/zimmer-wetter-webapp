@@ -44,6 +44,16 @@ h1 {
 	font-size: 3rem;
 }
 
+a {
+	color: var(--link-colour);
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 section,
 footer {
 	padding: 1rem 1.5rem;

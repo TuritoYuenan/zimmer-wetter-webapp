@@ -14,9 +14,12 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		align-items: center;
 	}
 
 	img {
+		width: auto;
+		height: 9rem;
 		margin: auto;
 		padding-inline: 1rem;
 		display: block;
@@ -31,5 +34,11 @@
 
 	#title > * {
 		margin-block: 0.5rem;
+	}
+
+	@media (width <= 900px) {
+		img {
+			height: 6rem;
+		}
 	}
 </style>
