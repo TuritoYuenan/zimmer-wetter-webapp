@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Header from "$components/Header.svelte";
 	import Footer from "$components/Footer.svelte";
+	import { formatDate, describe } from "$lib/utils";
 
 	import "../app.css";
-	import describe from "$lib/describe";
 	export let data;
 </script>
 
@@ -14,35 +14,110 @@
 <Header />
 
 <main class="grid">
-	<section style:grid-area=ds>
-		<h2>Description</h2>
+	<section style:grid-area="ds">
+		<h2>
+			<img
+				src="/icons/report.svg"
+				width="40"
+				height="40"
+				alt="Report"
+			/>{formatDate(data.xata.createdAt)} Report
+		</h2>
 		<p>{describe(data.temperature, data.humidity)}</p>
 	</section>
-	<section style:grid-area=tp>
-		<h2><img src="/icons/tempture.svg" width=40 height=40 alt="">Temperature</h2>
-		<p>{data.temperature} &deg;C</p>
+	<section style:grid-area="tp">
+		<h2>
+			<img
+				src="/icons/tempture.svg"
+				width="40"
+				height="40"
+				alt="Temperature"
+			/>Temperature
+		</h2>
+		{#if data.temperature > 125 || data.temperature < -40}
+			<p>OVERLOAD</p>
+		{:else}
+			<p>{data.temperature.toFixed(2)} &deg;C</p>
+		{/if}
 	</section>
-	<section style:grid-area=ht>
-		<h2><img src="/icons/humidity.svg" width=40 height=40 alt="">Humidity</h2>
-		<p>{data.humidity} %</p>
+	<section style:grid-area="ht">
+		<h2>
+			<img
+				src="/icons/humidity.svg"
+				width="40"
+				height="40"
+				alt="Humidity"
+			/>Humidity
+		</h2>
+		{#if data.humidity <= 100}
+			<p>{data.humidity.toFixed(0)} %</p>
+		{:else}
+			<p>OVERLOAD</p>
+		{/if}
 	</section>
-	<section style:grid-area=ps>
-		<h2><img src="/icons/pressure.svg" width=40 height=40 alt="">Barometric Pressure</h2>
-		<p>{data.pressure} hPa</p>
+	<section style:grid-area="ps">
+		<h2>
+			<img
+				src="/icons/pressure.svg"
+				width="40"
+				height="40"
+				alt="Pressure"
+			/>Barometric Pressure
+		</h2>
+		<p>{data.pressure.toFixed(0)} pascals</p>
 	</section>
-	<section style:grid-area=rn>
-		<h2><img src="/icons/rainfall.svg" width=40 height=40 alt="">Rainfall (1 Hour)</h2>
-		<p>{data.rainfall_H} mm</p>
-		<h2><img src="/icons/rainfall.svg" width=40 height=40 alt="">Rainfall (1 Day)</h2>
-		<p>{data.rainfall_D} mm</p>
+	<section style:grid-area="rn">
+		<h2>
+			<img
+				src="/icons/rainfall.svg"
+				width="40"
+				height="40"
+				alt="Rainfall"
+			/>Rainfall (1 Hour)
+		</h2>
+		<p>{data.rainfall_H.toFixed(2)} mm</p>
+		<h2>
+			<img
+				src="/icons/rainfall.svg"
+				width="40"
+				height="40"
+				alt="Rainfall"
+			/>Rainfall (1 Day)
+		</h2>
+		<p>{data.rainfall_D.toFixed(2)} mm</p>
 	</section>
-	<section style:grid-area=wd>
-		<h2><img src="/icons/wind-spd.svg" width=40 height=40 alt="">Average Wind Speed</h2>
-		<p>{data.windSpeedAvg} m/s</p>
-		<h2><img src="/icons/wind-spd.svg" width=40 height=40 alt="">Maximum Wind Speed</h2>
-		<p>{data.windSpeedMax} m/s</p>
-		<h2><img src="/icons/wind-dir.svg" width=40 height=40 alt="">Wind Direction</h2>
-		<p>{data.windDirection} degrees</p>
+	<section style:grid-area="wd">
+		<h2>
+			<img
+				src="/icons/wind-spd.svg"
+				width="40"
+				height="40"
+				alt="Wind Speed"
+			/>Average Wind Speed
+		</h2>
+		<p>{data.windSpeedAvg.toFixed(2)} m/s</p>
+		<h2>
+			<img
+				src="/icons/wind-spd.svg"
+				width="40"
+				height="40"
+				alt="Wind Speed"
+			/>Maximum Wind Speed
+		</h2>
+		<p>{data.windSpeedMax.toFixed(2)} m/s</p>
+		<h2>
+			<img
+				src="/icons/wind-dir.svg"
+				width="40"
+				height="40"
+				alt="Wind Direction"
+			/>Wind Direction
+		</h2>
+		{#if data.windDirection < 360}
+			<p>{data.windDirection.toFixed(0)} degrees</p>
+		{:else}
+			<p>OVERLOAD</p>
+		{/if}
 	</section>
 </main>
 
