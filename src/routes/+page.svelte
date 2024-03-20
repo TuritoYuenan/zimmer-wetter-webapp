@@ -1,17 +1,9 @@
 <script lang="ts">
-	import Header from "$components/Header.svelte";
-	import Footer from "$components/Footer.svelte";
+	import type { PageServerData } from "./$types";
 	import { formatDate, describe } from "$lib/utils";
 
-	import "../app.css";
-	export let data;
+	export let data: PageServerData;
 </script>
-
-<svelte:head>
-	<title>ZimmerWetter</title>
-</svelte:head>
-
-<Header />
 
 <main class="grid">
 	<section style:grid-area="ds">
@@ -120,8 +112,6 @@
 		{/if}
 	</section>
 </main>
-
-<Footer />
 
 <style>
 	main {
