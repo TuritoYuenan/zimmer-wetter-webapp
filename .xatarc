@@ -1,6 +1,0 @@
-{
-	"databaseURL": "https://TuritoYuenan-1fs98q.ap-southeast-2.xata.sh/db/zimmer-wetter",
-	"codegen": {
-		"output": "src/lib/xata.ts"
-	}
-}
