@@ -6,7 +6,7 @@
 
 # Want to help us make this template better? Share your feedback here: https://forms.gle/ybq9Krt8jtBL3iCk7
 
-ARG NODE_VERSION=21.7.0
+ARG NODE_VERSION=21.7.1
 
 ################################################################################
 # Use node image for base image for all stages.
@@ -65,7 +65,7 @@ COPY --from=deps /usr/src/app/node_modules ./node_modules
 COPY --from=build /usr/src/app/.svelte-kit/output/ ./.svelte-kit/output/
 
 # Expose the port that the application listens on.
-EXPOSE 6969
+EXPOSE 5173
 
 # Run the application.
 CMD npm start
