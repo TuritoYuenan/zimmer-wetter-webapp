@@ -1,3 +1,5 @@
+![Project Banner](.github/Swinburne%20Weather%20Service.png)
+
 # Web Application for ZimmerWetter project
 
 ## Usage
