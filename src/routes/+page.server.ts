@@ -17,11 +17,11 @@ export const load: PageServerLoad = async () => {
 		temperature: data?.temperature!,
 		humidity: data?.humidity!,
 		pressure: data?.pressure!,
-		windSpeedAvg: data?.windSpeedAvg!,
-		windSpeedMax: data?.windSpeedMax!,
-		windDirection: data?.windDirection!,
-		rainfall_D: data?.rainfall_D!,
-		rainfall_H: data?.rainfall_H!,
+		windSpeedAvg: data?.wind_speed_avg!,
+		windSpeedMax: data?.wind_speed_max!,
+		windDirection: data?.wind_direction!,
+		rainfall_D: data?.rainfall_day!,
+		rainfall_H: data?.rainfall_hour!,
 		xata: data?.xata!
 	};
 }

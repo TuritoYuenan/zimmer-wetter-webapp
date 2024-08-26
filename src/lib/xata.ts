@@ -10,14 +10,14 @@ const tables = [
 	{
 		name: "weather_data",
 		columns: [
-			{ name: "humidity", type: "int" },
-			{ name: "windDirection", type: "int" },
-			{ name: "temperature", type: "float" },
-			{ name: "pressure", type: "float" },
-			{ name: "windSpeedAvg", type: "float" },
-			{ name: "windSpeedMax", type: "float" },
-			{ name: "rainfall_H", type: "float" },
-			{ name: "rainfall_D", type: "float" },
+			{ name: "humidity", type: "int", notNull: true, defaultValue: "0" },
+			{ name: "wind_direction", type: "int", notNull: true, defaultValue: "0" },
+			{ name: "temperature", type: "float", notNull: true, defaultValue: "0" },
+			{ name: "pressure", type: "float", notNull: true, defaultValue: "101325", },
+			{ name: "wind_speed_avg", type: "float", notNull: true, defaultValue: "0", },
+			{ name: "wind_speed_max", type: "float", notNull: true, defaultValue: "0", },
+			{ name: "rainfall_hour", type: "float", notNull: true, defaultValue: "0", },
+			{ name: "rainfall_day", type: "float", notNull: true, defaultValue: "0" },
 		],
 	},
 ] as const;
