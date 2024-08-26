@@ -9,6 +9,5 @@ node_modules
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
-src/xata.ts
 .xatarc
 .xata
